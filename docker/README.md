@@ -13,3 +13,4 @@
 1. Run the installer: `./pcml.run`
 2. Copy registration file: `cp ~/installer/pcm.crg /opt/picc/`
 3. Test compiler: `./ccsc +V`
+4. create directory for project building: `mkdir temporal`
