@@ -1,1 +1,5 @@
 # SetaSense
+
+## commands
+
+- build
