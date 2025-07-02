@@ -2,4 +2,5 @@
 
 ## commands
 
-- build
+1. run `picc` [docker container](./docker/README.md)
+2. build: `./build.sh`
