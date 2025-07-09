@@ -1,6 +1,6 @@
 #include <16F877A.h>
 #fuses HS, NOWDT, NOPROTECT, NOCPD
-#use delay(clock = 20000000)
+#use delay(clock = 20Mhz, crystal)
 #use fast_io(b)
 
 char customBlink(int delay)
@@ -17,6 +17,6 @@ void main()
   set_tris_b(0);
   while (true)
   {
-    customBlink(999);
+    customBlink(1000);
   }
 }
