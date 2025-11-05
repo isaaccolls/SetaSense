@@ -2,6 +2,8 @@
 
 - build image: `docker build -t setasense/picc .`
 - run container: `docker run -dti --name picc setasense/picc`
+  - regular start: `docker start picc`
+  - regular stop: `docker stop picc`
 - container access: `docker exec -it picc /bin/bash`
   - checks architecture: `dpkg --print-architecture` and `dpkg --print-foreign-architectures`
   - ldd < 2.27: `ldd --version`
