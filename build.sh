@@ -1,5 +1,12 @@
 #!/bin/bash
 echo "start building SetaSense Docker image 🚀"
+
+# Sincronizar drivers si no existen o si el contenedor está disponible
+if [ ! -d "./drivers" ] || [ ! -f "./drivers/lcd.c" ]; then
+  echo "📦 Sincronizando drivers desde el contenedor..."
+  ./sync-drivers.sh
+fi
+
 docker exec -it picc /bin/bash -c "rm -rf /root/temporal"
 echo "👉 cleaned up picc container 1"
 docker exec -it picc /bin/bash -c "mkdir -p /root/temporal"
